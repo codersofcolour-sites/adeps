@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static wagtailcore_tags wagtailimages_tags %}
+{% load static wagtailcore_tags wagtailimages_tags wagtailcore_tags %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -54,12 +54,13 @@
     
 
     <div class="intro">
-        <!--<h1 class="f1">{{ self.title }}</h1>-->
-        <h1 class="intro-text">{{ page.intro }} </h1>
-        <div class="intro-body">{{ page.body|richtext }}</div>
+        {% for block in page.content %}
+        {% include_block block %}
+        {% endfor %}
+        {% endblock %}
     </div>
-
-    {% endblock %}
+   
+    
     
 </body>
 

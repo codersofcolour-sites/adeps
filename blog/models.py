@@ -1,5 +1,6 @@
 from django.db import models
 from wagtail.core import blocks
+from modelcluster.fields import ParentalKey
 
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
@@ -47,3 +48,8 @@ class BlogPage(Page):
         FieldPanel('intro'),
         FieldPanel('body', classname="full"),
     ]
+
+
+
+
+    
