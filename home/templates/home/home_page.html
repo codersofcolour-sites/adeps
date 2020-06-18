@@ -41,7 +41,7 @@
 
 <body>
     {% block content %}
-    {% image self.banner_image fill-1000x250 as img %}
+    {% image self.banner_image fill-1570x690 as img %}
 
     <div class="jumbotron-fluid text-center" style="background-image: url('{{ img.url }}'); background-size: contain; color: #fff !important">
         <h1 class="display-4">{{ self.banner_title }}</h1>
@@ -59,6 +59,8 @@
         {% endfor %}
         {% endblock %}
     </div>
+
+
    
     
     
