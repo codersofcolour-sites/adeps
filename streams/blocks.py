@@ -41,3 +41,15 @@ class CardBlock(blocks.StructBlock):
         template = "streams/card_block.html"
         icon = "placeholder"
         label = "cards"
+
+
+    class ImageWithLink(blocks.StructBlock):
+        """ Image with a clickable link on it """
+        image = ImageChooserBlock(label="Image", required=True, help_text="Must be at least 2048 x 1535 for full screen images")
+        link = blocks.URLBlock(label="Link", required=True, help_text="Include https:// or http://")
+'''
+    class Meta:
+        template = 'core/blocks/imagewithlink.html'
+        form_classname = 'imagewithlink'
+        icon = 'picture'
+'''
