@@ -44,7 +44,7 @@
     {% image self.banner_image fill-1570x690 as img %}
 
     <div class="jumbotron-fluid text-center" style="background-image: url('{{ img.url }}'); background-size: contain; color: #fff !important">
-        <h1 class="display-4">{{ self.banner_title }}</h1>
+        <h1 class="display-4 text-left pl-5">{{ self.banner_title }}</h1>
         <div class="lead">{{ self.banner_subtitle|richtext }}</div>
         {% if self.banner_cta %}
         <a class="btn btn-primary btn-lg" href="#" role="button">Donate</a>
@@ -53,7 +53,7 @@
     </div>
     
 
-    <div class="intro">
+    <div class="intro text-center">
         {% for block in page.content %}
         {% include_block block %}
         {% endfor %}

@@ -10,3 +10,8 @@ body{
 .main{
     padding: 5rem 10rem 0 10rem;
 }
+
+.intro{
+    background-color: red !important;
+
+}
