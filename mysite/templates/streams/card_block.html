@@ -7,10 +7,10 @@
     <h1 class="text-center mb-sm-5">{{ self.title }}</h1>
     
     <h3 class="text-center mb-sm-5">{{ self.text }}</h3>
-    <div class="card-deck">
+    <div class="card-deck pt-md-5">
         {% for card in self.cards %}
             {% image card.image fill-300x200 as img %}
-            <div class="card text-center mb-sm-5">
+            <div class="card text-center mb-sm-5 border-0">
                 <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top" />
                 <div class="card-body">
                     <h5 class="card-title">{{ card.title }}</h5>
