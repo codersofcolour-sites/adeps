@@ -9,7 +9,6 @@ import wagtail.core.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailimages', '0022_uploadedimage'),
         ('about', '0001_initial'),
     ]
 
