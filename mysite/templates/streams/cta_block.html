@@ -1,0 +1,18 @@
+{# streams/cta_block.html #}
+{% load wagtailcore_tags %}
+
+<div class="container mb-sm-5 mt-sm-5 ">
+    <div class="row"  id="cta_block">
+        <div class="col-md-12  col-sm-12">
+            <h1 class="pb-md-5">{{ self.title }}</h1>
+            {{ self.text|richtext }}
+
+            {% if self.button_page %}
+            <a class="btn btn-primary btn-lg mt-4" href="{{ self.button_page.url }}" role="button">{{ self.button_text }}</a>
+               
+            {% elif self.button_url %}
+                <a href="{{ self.button_url }}">{{ self.button_text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

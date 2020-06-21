@@ -30,11 +30,11 @@ class AboutPage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
    )
-
-    content = StreamField(
+content = StreamField(
         [
             ("title_and_text", blocks.TitleAndTextBlock()),
             ("cards", blocks.CardBlock()),
+            ("cta", blocks.CTABlock()),   
             ("two_column_block", blocks.TwoColumnBlock()),
         ],
         null=True,
@@ -43,16 +43,16 @@ class AboutPage(Page):
    
  
 
-    content_panels = Page.content_panels + [
+content_panels = Page.content_panels + [
         FieldPanel("banner_title"),
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
-        PageChooserPanel("banner_cta"),
+        ImageChooserPanel("banner_cta"),
         StreamFieldPanel("content"),
     
     ]
 
-    class Meta:
+class Meta:
 
         verbose_name = "About Page"
         verbose_name_plural = "About Pages"
