@@ -2,12 +2,13 @@
 {% load wagtailcore_tags %}
 
 <div class="container mb-sm-5 mt-sm-5" style="background-color: lightseagreen; color: whitesmoke;">
-    <div class="row"  id="cta_block">
-        <div class="col-md-12  col-sm-12">
-            <h1 class="pb-md-5">{{ self.title }}</h1>
-            {{ self.text|richtext }}
-
-            {% if self.button_page %}
+        <div class="container mb-sm-5 mt-sm-5 py-md-5">
+            <h1 class="pt-md-3 text-uppercase">{{ self.title }}</h1>
+            <p class="py-md-3" id="banner-text">
+                {{ self.text|richtext }}
+            </p>
+            <hr />
+            {% if self.button_cta %}
             <a class="btn btn-primary btn-lg mt-4" href="{{ self.button_page.url }}" role="button">{{ self.button_text }}</a>
                
             {% elif self.button_url %}
@@ -16,3 +17,10 @@
         </div>
     </div>
 </div>
+
+<!---
+<div class="main-objective-text container mb-sm-5 mt-sm-5 py-md-5">
+    <h1 class="pt-md-3 text-uppercase">{{ self.title }}</h1>
+ 
+    <p class="py-md-3" id="banner-text">{{ self.text  }}</p>
+   
