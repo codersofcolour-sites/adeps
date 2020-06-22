@@ -94,3 +94,11 @@ class CTABlock(blocks.StructBlock):
         template = "streams/cta_block.html"
         icon = "placeholder"
         label = "Call to Action"
+
+
+class RichtextBlock(blocks.RichTextBlock):
+
+    class Meta: #noqa
+        template = "streams/richtext_block.html"
+        icon ="edit"
+        label = "Full RichText"
