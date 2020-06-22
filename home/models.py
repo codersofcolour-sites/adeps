@@ -36,7 +36,6 @@ class HomePage(Page):
             ("title_and_text", blocks.TitleAndTextBlock()),
             ("cards", blocks.CardBlock()),
             ("cta", blocks.CTABlock()),
-            ("full_richtext", blocks.RichtextBlock()),
         ],
         null=True,
         blank=True,
