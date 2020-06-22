@@ -30,6 +30,8 @@ class AboutPage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
    )
+
+   
 content = StreamField(
         [
             ("title_and_text", blocks.TitleAndTextBlock()),

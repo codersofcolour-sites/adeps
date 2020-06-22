@@ -14,6 +14,8 @@ class HomePage(Page):
     template = "home/home_page.html"
     max_count = 1
 
+    body = RichTextField(blank=True)
+
     banner_title = models.CharField(max_length=100, blank=False, null=True)
     banner_subtitle = RichTextField(features=["bold", "italic"])
     banner_image = models.ForeignKey(
@@ -44,6 +46,7 @@ class HomePage(Page):
  
 
     content_panels = Page.content_panels + [
+        FieldPanel('body', classname="full"),
         FieldPanel("banner_title"),
         FieldPanel("banner_subtitle"),
         ImageChooserPanel("banner_image"),
