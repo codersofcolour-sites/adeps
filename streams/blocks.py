@@ -1,12 +1,6 @@
-""" streamfields live in here 
+
 from django.db import models
-from wagtail.core import blocks
-from wagtail.images.blocks import ImageChooserBlock
 
-
-from wagtail.core import blocks
-
-"""
 
 from wagtail.admin.edit_handlers import (FieldPanel, FieldRowPanel,
                                          InlinePanel, MultiFieldPanel,
@@ -85,10 +79,6 @@ class CTABlock(blocks.StructBlock):
     button_url = blocks.URLBlock(required=False)
     button_text = blocks.CharBlock(required=True, default='Learn More', max_length=40)
     
-
-
-    
-
 
     class Meta:  # noqa
         template = "streams/cta_block.html"
