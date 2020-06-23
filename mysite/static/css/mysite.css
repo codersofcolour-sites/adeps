@@ -9,7 +9,7 @@ h1,h2,h3,h4{
     text-transform: uppercase;
 }
 
-button{
+button, .btn.btn-primary.btn-lg{
     background-color: #ffc107;
     border-color: #ffc107;
     color: whitesmoke;

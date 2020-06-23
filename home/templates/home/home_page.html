@@ -5,25 +5,16 @@
     {% block content %}
     {% image self.banner_image fill-1570x690 as img %}
 
-    <div class="jumbotron-fluid text-center"  style="background-image: url('{{ img.url }}'); background-size: contain; color: #fff !important;">
-        <h1 class="display-4" style="font-weight: 900; text-transform: uppercase; background-color: darkcyan">{{ self.banner_title }}</h1>
+    <div class="jumbotron-fluid text-center"
+        style="background-image: url('{{ img.url }}'); background-size: contain; color: #fff !important;">
+        <h1 class="display-4" style="font-weight: 900; text-transform: uppercase; background-color: darkcyan">
+            {{ self.banner_title }}</h1>
         <div class="lead" style="font-weight:bold; font-style: italic;">{{ self.banner_subtitle|richtext }}</div>
         {% if self.banner_cta %}
         <a class="btn  btn-primary btn-lg" href="#" role="button">Donate</a>
         {% endif %}
-        
+
     </div>
-
-    <div class="about-us  bg-default ">
-    <div class="about-us-text container mb-sm-5 mt-sm-5 py-md-5">
- 
-    <p class="py-md-3 text-center" id="banner-text" style="font-size: 20px;"> {{ page.body|richtext }}</p>
-   
-</div>
-</div>
-
-   
-
 
 
 
@@ -31,14 +22,14 @@
         {% for block in page.content %}
         {% include_block block %}
         {% endfor %}
-        {% endblock %}   
+        {% endblock %}
     </div>
 
- 
 
-   
-    
-    
+
+
+
+
 </body>
 
 </html>
