@@ -6,7 +6,7 @@
 <div class="container mb-sm-5 mt-sm-5">
     <h1 class="text-center mb-sm-5 mb-md-2">{{ self.title }}</h1>
     <hr class="w-50 " />
-    <h3 class="text-center mb-sm-5" id="banner-text">{{ self.text }}</h3>
+    <p class="text-center mb-sm-5" id="banner-text">{{ self.text }}</p3>
     <div class="card-deck pt-md-5">
         {% for card in self.cards %}
             {% image card.image fill-300x200 as img %}

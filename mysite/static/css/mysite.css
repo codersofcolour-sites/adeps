@@ -27,12 +27,10 @@ button{
 
 .jumbotron-fluid{
     padding: 15rem 0 15rem 0;
-    filter: brightness(50%);
 }
 
 #base-jumbotron{
     padding: 6rem 3rem 1rem 5rem;
-    /*filter: brightness(50%);*/
 }
 
 li,button{
