@@ -9,4 +9,36 @@ from wagtail.embeds.blocks import EmbedBlock
 from streams import blocks
 
 class AboutPage(Page):
-   body = RichTextField(blank=True)
+   
+    banner_title = models.CharField(max_length=100, blank=False, null=True)
+    banner_subtitle = RichTextField(features=["bold", "italic"])
+    banner_image = models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
+
+
+    body = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('body', classname="full"),
+        FieldPanel('banner_title'),
+        FieldPanel("banner_subtitle"),
+        ImageChooserPanel('banner_image'), 
+        StreamFieldPanel("content"),
+    ]
+
+    content = StreamField(
+        [
+            ("title_and_text", blocks.TitleAndTextBlock()),
+            ("cards", blocks.CardBlock()),
+            ("cta", blocks.CTABlock()),
+        ],
+        null=True,
+        blank=True,
+    )
+   
+   

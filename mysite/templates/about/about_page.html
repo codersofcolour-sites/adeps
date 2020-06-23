@@ -12,25 +12,19 @@
 
 
     </div>
+   
+   <div class="rich-text container mt-md-5 text-center" id="about-richtext">{{ page.body|richtext }}</p> 
+    {% if self.banner_cta %}
+    <a class="btn  btn-primary btn-lg" href="#" role="button">Donate</a>
+    {% endif %}
+  
     <div class="intro text-center">
         {% for block in page.content %}
         {% include_block block %}
         {% endfor %}
-
+        {% endblock %}
     </div>
-
-    <div class="row">
-
-        <div class="col-md-6">
-               {{ self.left_column }}
-          </div>
-          <div class="col-md-6">
-               {{ self.right_column }}
-         </div>
     
-    </div>
-
-</body>
 {% endblock %}
 
 </html>
