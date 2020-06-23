@@ -9,7 +9,7 @@ from wagtail.embeds.blocks import EmbedBlock
 from streams import blocks
 
 class AboutPage(Page):
-    """abour page model."""
+    """about page model."""
 
     template = "about/about_page.html"
     
@@ -31,7 +31,7 @@ class AboutPage(Page):
         related_name="+"
    )
 
-   
+
 content = StreamField(
         [
             ("title_and_text", blocks.TitleAndTextBlock()),

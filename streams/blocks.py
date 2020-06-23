@@ -21,7 +21,6 @@ class ColumnBlock(blocks.StreamBlock):
 
 
 
-
 class TwoColumnBlock(blocks.StructBlock):
 
     left_column = ColumnBlock(icon='arrow-right', label='Left column content')
