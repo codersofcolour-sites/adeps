@@ -2,6 +2,7 @@
 {% load wagtailcore_tags %}
 {% block content %}
 
+<div class="container">
 <h1>{{ page.title }}</h1>
 <p>
     {{ self.intro|richtext }}
@@ -20,4 +21,5 @@
         Submit Form
     </button>
 </form>
+</div>
 {% endblock %}
