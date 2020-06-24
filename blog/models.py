@@ -10,7 +10,6 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 
 from wagtail.embeds.blocks import EmbedBlock
 
-'''
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
     body = StreamField([
@@ -29,7 +28,7 @@ class BlogIndexPage(Page):
         live_blogpages = self.get_children().live()
         context['blogpages'] = live_blogpages.order_by('-first_published_at')
         return context
-    '''
+   
 
 class BlogPage(Page):
     date = models.DateField("Post date")
