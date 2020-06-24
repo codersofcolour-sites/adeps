@@ -10,7 +10,6 @@ import wagtail.images.blocks
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailimages', '0022_uploadedimage'),
         ('donate', '0001_initial'),
     ]
 
