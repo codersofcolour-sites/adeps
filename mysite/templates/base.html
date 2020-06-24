@@ -1,92 +1,100 @@
-{% load static wagtailuserbar %}
+{% load static wagtailuserbar menus_tags %}
+
+{% get_menu "main" as navigation %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>
-            {% block title %}
-                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
-            {% endblock %}
-            {% block title_suffix %}
-                {% with self.get_site.site_name as site_name %}
-                    {% if site_name %}- {{ site_name }}{% endif %}
-                {% endwith %}
-            {% endblock %}
-        </title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- CSS Reset -->
-        
-        <!-- CSS Reset -->
-        <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-        <!-- Tachyons CSS minified -->
-        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+<head>
+  <meta charset="utf-8" />
+  <title>
+    {% block title %}
+    {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+    {% endblock %}
+    {% block title_suffix %}
+    {% with self.get_site.site_name as site_name %}
+    {% if site_name %}- {{ site_name }}{% endif %}
+    {% endwith %}
+    {% endblock %}
+  </title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {# Global stylesheets #}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">        
-        <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
+  <!-- CSS Reset -->
 
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
-    </head>
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <!-- Tachyons CSS minified -->
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
 
-    <body class="{% block body_class %}{% endblock %}">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white container-flex py-md-5 px-md-3">
-            <a class="navbar-brand pl-md-5" href="#"><img src="http://www.adeps.or.ke/wp-content/uploads/2017/12/adeps_logo.jpg"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav navbar-nav ml-auto ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  {# Global stylesheets #}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
+
+  {% block extra_css %}
+  {# Override this in templates to add extra stylesheets #}
+  {% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white container-flex py-md-5 px-md-3">
+    <a class="navbar-brand pl-md-5" href="#"><img
+        src="http://www.adeps.or.ke/wp-content/uploads/2017/12/adeps_logo.jpg"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav navbar-nav ml-auto ">
+        <li class="nav-item active">
+         
+
+        {% for item in navigation.menu_items.all %}
+                <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}>{{ item.title }}</a>
+                {% endfor %}
+        <!---
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+                <li class="nav-item pl-md-5 ">
+                  <a class="nav-link" href="/about/"></a>
                 </li>
                 <li class="nav-item pl-md-5 ">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="/blog-index-page/"></a>
                 </li>
                 <li class="nav-item pl-md-5 ">
-                  <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item pl-md-5 ">
-                  <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                
-                
-               <!---- <li class="nav-item pl-md-5 dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                  </a>
-                  <div class="dropdown-menu pl-md-5" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
+                  <a class="nav-link" href="/contact-us/"></a>
                 </li> -->
                 <li class="nav-item pl-md-5">
-                  <button class="nav-link  btn-lg px-md-3 mr-md-5 text-center" style="font-family: 'Montserrat', sans-serif;"  href="#">DONATE</a>
+                  <button class="nav-link  btn-lg px-md-3 mr-md-5 text-center" style="font-family: 'Montserrat', sans-serif;"  href="/donate/">DONATE</a>
                 </li>
               </ul>
-            </div>
-          </nav>
-        {% wagtailuserbar %}
+    </div>
+  </nav>
+  {% wagtailuserbar %}
 
-        
-            {% block content %}{% endblock %}
-        </div>
 
-        {# Global javascript #}
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  {% block content %}{% endblock %}
+  </div>
 
-<script type="text/javascript" src="{% static 'js/mysite.js' %}"></script>
+  {# Global javascript #}
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-        {% endblock %}
-    </body>
+  <script type="text/javascript" src="{% static 'js/mysite.js' %}"></script>
+
+  {% block extra_js %}
+  {# Override this in templates to add extra javascript #}
+  {% endblock %}
+</body>
+
 </html>

@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'about',
     'donate',
     'contact',
+    'menus',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -91,6 +93,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries':{
+                'menus_tags': 'menus.templatetags.menus_tags',
+            }
         },
     },
 ]
