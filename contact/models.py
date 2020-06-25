@@ -5,14 +5,17 @@ from wagtail.admin.edit_handlers import (
     FieldPanel,
     FieldRowPanel,
     InlinePanel,
-    MultiFieldPanel
+    MultiFieldPanel,
+    StreamFieldPanel
 )
-from wagtail.core.fields import RichTextField
+from wagtail.core.fields import RichTextField, StreamField
 from wagtail.contrib.forms.models import (
     AbstractEmailForm,
     AbstractFormField
 )
 
+
+from streams import blocks
 
 class FormField(AbstractFormField):
     page = ParentalKey(
@@ -33,6 +36,7 @@ class ContactPage(AbstractEmailForm):
     thank_you_text = RichTextField(blank=True)
 
     content_panels = AbstractEmailForm.content_panels + [
+        StreamFieldPanel("content"),
         FieldPanel('intro'),
         InlinePanel('form_fields', label='Form Fields'),
         FieldPanel('thank_you_text'),
@@ -44,3 +48,12 @@ class ContactPage(AbstractEmailForm):
             FieldPanel("subject"),
         ], heading="Email Settings"),
     ]
+
+    content = StreamField(
+        [
+            ("cards", blocks.CardBlock()),
+        ],
+        null=True,
+        blank=True,
+    )
+   
