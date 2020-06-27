@@ -9,7 +9,7 @@ h1,h2,h3,h4{
     text-transform: uppercase;
 }
 
-button, .btn.btn-primary.btn-lg{
+button, .btn.btn-primary.btn-lg, .button{
     background-color: #ffc107;
     border-color: #ffc107;
     color: whitesmoke;
@@ -20,8 +20,8 @@ button, .btn.btn-primary.btn-lg{
 }
 
 #banner-text, .title-text-block-text{
-    font-size: 20px;
-    padding: 0 15rem 0 15rem;
+    font-size: 1rem;
+    padding: .5rem 15rem 0 15rem;
 }
 
 
@@ -52,7 +52,21 @@ input{
     margin-left: 2rem;
 }
 
-/*#cta_block{
-    background-color: cadetblue ;
+
+.card-block{
+    padding-top: 4rem;
+}
+/*Home page */
+.home-page-rich-text{
+    padding: 11rem 0 11rem 0;
+    background-color: #FAFAFA;
+   /* box-shadow:  0 41.8px 33.4px rgba(0, 0, 0, 0.086);*/
 }
 
+.container-fluid.cta-block{
+    padding: 5rem;
+}
+.cta-block-text{
+    padding: 0 10rem 3rem 10rem;
+    font-size: 20px
+}

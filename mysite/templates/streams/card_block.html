@@ -3,27 +3,27 @@
 
 {% load wagtailimages_tags %}
 
-<div class="container-fluid mb-sm-5 mt-sm-5">
-    <h1 class="text-center mb-sm-5 mb-md-2">{{ self.title }}</h1>
+<div class="card-block container-fluid mb-sm-5 mt-sm-5" id="card-block">
+    <h3 class="text-center mb-sm-5 mb-md-2">{{ self.title }}</h3>
     
     <p class="text-center mb-sm-5 mb-md-2" id="banner-text">{{ self.text }}</p3>
-    <div class="card-deck pt-md-5">
+    <div class="card-deck">
         {% for card in self.cards %}
             {% image card.image fill-300x200 as img %}
             <div class="card text-center mb-sm-5 border-0">
                 <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top mt-md-5" />
                 <div class="card-body">
-                    <h5 class="card-title pb-md-3">{{ card.title }}</h5>
+                    <h5 class="card-title pb-md-3 font-weight-bold">{{ card.title }}</h5>
                     <p class="card-text">{{ card.text }}</p>
-                    {% if card.button_page %}
-                        <a href="{{ card.button_page.url }}" class="btn btn-primary">
+                    <!--{% if card.button_page %}
+                        <a href="{{ card.button_page.url }}" class="button p-md-2">
                             Learn More
                         </a>
                     {% elif card.button_url %}
-                        <a href="{{ card.button_url }}" class="btn btn-primary">
+                        <a href="{{ card.button_url }}" class=" button btn-md ">
                             Learn More
                         </a>
-                    {% endif %}
+                    {% endif %}-->
                 </div>
             </div>
         {% endfor %}
