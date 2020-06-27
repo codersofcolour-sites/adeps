@@ -19,9 +19,9 @@ button, .btn.btn-primary.btn-lg{
 
 }
 
-#banner-text{
+#banner-text, .title-text-block-text{
     font-size: 20px;
-    padding: 0 5rem 0 5rem;
+    padding: 0 15rem 0 15rem;
 }
 
 
