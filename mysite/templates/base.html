@@ -48,12 +48,12 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav navbar-nav ml-auto ">
         <li class="nav-item active">
-         
 
-        {% for item in navigation.menu_items.all %}
-                <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}>{{ item.title }}</a>
-                {% endfor %}
-        <!---
+
+          {% for item in navigation.menu_items.all %}
+          <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}>{{ item.title }}</a>
+          {% endfor %}
+          <!---
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
                 <li class="nav-item pl-md-5 ">
@@ -65,16 +65,143 @@
                 <li class="nav-item pl-md-5 ">
                   <a class="nav-link" href="/contact-us/"></a>
                 </li> -->
-                <li class="nav-item pl-md-5">
-                  <button class="nav-link  btn-lg px-md-3 mr-md-5 text-center" style="font-family: 'Montserrat', sans-serif;"  href="/donate/">DONATE</a>
-                </li>
-              </ul>
+        <li class="nav-item pl-md-5">
+          <button class="nav-link  btn-lg px-md-3 mr-md-5 text-center" style="font-family: 'Montserrat', sans-serif;"
+            href="/donate/">DONATE</a>
+        </li>
+      </ul>
     </div>
   </nav>
   {% wagtailuserbar %}
 
 
   {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer class="page-footer font-small stylish-color-dark pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Keep in touch</h5>
+          <ul class="list-unstyled">
+            <li>
+              Address : P.O. Box 1409 -50300<br>
+              MARAGOLI - KENYA
+            </li>
+            <li>
+              Phone : (+254) 723 542 952
+            </li>
+            <li>
+              Email : adeps2002@gmail.com
+
+            </li>
+
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Site made by:
+      <a href="https://github.com/jany-dev/"> JANY-DEV</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
   </div>
 
   {# Global javascript #}
