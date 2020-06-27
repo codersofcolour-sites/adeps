@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags wagtailimages_tags %}
 <!-- @Add banner -->
- <div class ="container"> 
+ 
 {% block content %}
+<div class ="container"> 
     <h1>{{ page.title }}</h1>
     <div class="intro">{{ page.intro|richtext }}</div>
+    <div class="card blog-posts mb-md-5">
     {% for post in blogpages %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {% image post.image fill-320x320 %}
-        {{ post.image }} == 
         {{ post.specific.date }}
+        </div>
     {% endfor %}
-    
-<div>
-{{self.subtitle}}
+
 </div>
+    <!---
+{{self.subtitle}}
 {% for block in page.content %}
     {% include_block block %}
     {% endfor %}
