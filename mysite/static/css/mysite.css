@@ -9,12 +9,12 @@ h1,h2,h3,h4{
     text-transform: uppercase;
 }
 
-button, .btn.btn-primary.btn-lg, .button{
+button, .btn.btn-primary.btn-lg, .button, .contact-page button{
     background-color: #ffc107;
     border-color: #ffc107;
     color: whitesmoke;
     font-weight: bolder;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 
 }
@@ -123,6 +123,51 @@ input{
 
 /* contact-page */
 
+.contact-page label {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    color: #777777;
+}
+
+.contact-page label, textarea{
+    align-items: center;
+
+}
+
+.contact-page input, optgroup, select, textarea{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: none;
+    background: none;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    padding: 2rem 0 2rem 0;
+    text-align: left;
+}
+.contact-page input{
+    margin: 0;
+}
+
+.contact-page .text-center.border.border-light.p-5{
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.contact-page button{
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: .3rem;
+}
 /* donate */
 #donate-page-richtext{
     background-color:cadetblue;
@@ -132,6 +177,8 @@ input{
      font-size: 1.5rem;
 
 }
+
+
 
 /*nav bar */
 
@@ -143,9 +190,9 @@ a.d-inline-flex{
     padding-left: 2rem;
     text-decoration: none;
     color: #1F1A17;
-    
-    text-transform: capitalize;
-    font-family:'Lato', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
 }
 
 a.d-inline-flex:hover{
@@ -185,3 +232,4 @@ a.d-inline-flex:hover{
     background-color:#212121;
     font-size: small;
 }
+

@@ -8,28 +8,27 @@
         {{ self.intro|richtext }}
     </p>
 
-    <form action="{% pageurl page %}" method="POST" class="text-center border border-light p-5" >
+    <form action="{% pageurl page %}" method="POST" class="text-center border border-light p-5">
 
         {% csrf_token %}
 
 
-        <ul class="list-unstyled" class="form-row mb-4" >
+        <ul class="list-unstyled" class="form-row mb-4">
             <div class="form-group col-md-12">
-            {{ form.as_ul }}
+                {{ form.as_ul }}
         </ul>
-    
+
         <button type="submit">
             Submit Form
         </button>
     </form>
+
+
+<div class="container contact-page intro text-center">
+    {% for block in page.content %}
+    {% include_block block %}
+    {% endfor %}
+
 </div>
-
-    <div class="intro text-center">
-        {% for block in page.content %}
-        {% include_block block %}
-        {% endfor %}
-
-    </div>
 </div>
 {% endblock %}
-
