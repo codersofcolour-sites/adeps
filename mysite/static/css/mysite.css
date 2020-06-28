@@ -55,7 +55,7 @@ input{
 }
 /*Home page */
 .home-page-rich-text{
-    padding: 11rem 0 11rem 0;
+    padding: 11rem 0 6rem 0;
     background-color: #FAFAFA;
    /* box-shadow:  0 41.8px 33.4px rgba(0, 0, 0, 0.086);*/
 }
@@ -102,6 +102,8 @@ input{
 }
 
 */
+
+/* Blog */
 .blog-index-card{
     cursor: pointer;
    
@@ -115,6 +117,19 @@ input{
     -webkit-transition: box-shadow .6s ease-in;
   }
 
-.blog-index-card a:hover, li:hover{
+.blog-index-card a:hover,  li:hover{
     color: white;
 }
+
+/* contact-page */
+
+/* donate */
+#donate-page-richtext{
+    background-color:#f8f8f8;
+     color: cadetblue;
+     padding: 5rem;
+     box-shadow: 1px 8px 20px darkgrey;
+     margin-top: 5rem;
+
+}
+
