@@ -13,8 +13,23 @@ from wagtail.embeds.blocks import EmbedBlock
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
 
+    
+
+    banner_title = models.CharField(max_length=100, blank=False, null=True)
+    banner_subtitle = RichTextField(features=["bold", "italic"])
+    banner_image = models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
+
     content_panels = Page.content_panels + [
-        FieldPanel('intro', classname="full")
+        FieldPanel("banner_title"),
+        FieldPanel("banner_subtitle"),
+        ImageChooserPanel("banner_image"),
+        FieldPanel('intro', classname="full"),   
     ]
 
     def get_context(self, request):
@@ -27,6 +42,17 @@ class BlogIndexPage(Page):
   
 
 class BlogPage(Page):
+
+    banner_title = models.CharField(max_length=100, blank=False, null=True)
+    banner_subtitle = RichTextField(features=["bold", "italic"])
+    banner_image = models.ForeignKey(
+        "wagtailimages.Image",
+        null=True,
+        blank=False,
+        on_delete=models.SET_NULL,
+        related_name="+"
+    )
+
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
     body = StreamField([
@@ -40,11 +66,18 @@ class BlogPage(Page):
     blank=True,
     on_delete=models.SET_NULL
     )
+    
     content_panels = Page.content_panels + [
+        FieldPanel("banner_title"),
+        FieldPanel("banner_subtitle"),
+        ImageChooserPanel("banner_image"),
         FieldPanel('date'),
         FieldPanel('intro'),
         StreamFieldPanel('body'),
         ImageChooserPanel('image'),
-    ]
+        ]
+
+
+  
 
     

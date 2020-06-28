@@ -19,10 +19,7 @@ button, .btn.btn-primary.btn-lg, .button{
 
 }
 
-.about-page .title-text-block-text{
-    padding: 0.5rem 5rem 0 0;
 
-}
 
 
 .jumbotron-fluid{
@@ -33,7 +30,7 @@ button, .btn.btn-primary.btn-lg, .button{
     padding: 6rem 3rem 1rem 5rem;
 }
 
-li,button{
+button{
     text-transform: uppercase;
 }
 
@@ -70,7 +67,12 @@ input{
     padding: 0 10rem 3rem 10rem;
     font-size: 20px
 }
-/* about page */
+
+.about-page .title-text-block-text{
+    padding: 0.5rem 5rem 0 0;
+
+}
+/* about page *
 
 .about-page .cta-block-text{
     padding: 0 1rem 3rem 1rem;
@@ -97,4 +99,22 @@ input{
 
 .about-page .container-fluid.cta-block{
     padding-left: 2rem;
+}
+
+*/
+.blog-index-card{
+    cursor: pointer;
+   
+}
+.blog-index-card a{
+    text-decoration: none;
+}
+.blog-index-card:hover {
+    background-color: cadetblue;
+    box-shadow: 1px 8px 20px grey;
+    -webkit-transition: box-shadow .6s ease-in;
+  }
+
+.blog-index-card a:hover, li:hover{
+    color: white;
 }
