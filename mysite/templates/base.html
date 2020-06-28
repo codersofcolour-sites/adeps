@@ -36,6 +36,15 @@
   {# Override this in templates to add extra stylesheets #}
   {% endblock %}
 </head>
+<!---
+<div class="containter-fluid px-md-5 navbar-contact-info">
+  <ul class="list-unstyled">
+    <li>
+      (+254) 723 542 952 |  adeps2002@gmail.com
+    </li>
+  </ul>
+</div>
+-->
 
 <body class="{% block body_class %}{% endblock %}">
   <nav class="navbar navbar-expand-lg navbar-light bg-white container-flex py-md-5 px-md-3">
@@ -51,20 +60,11 @@
 
 
           {% for item in navigation.menu_items.all %}
-          <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}>{{ item.title }}</a>
+          <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}
+            class="d-inline-flex">{{ item.title }}</a>
           {% endfor %}
-          <!---
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-              </li>
-                <li class="nav-item pl-md-5 ">
-                  <a class="nav-link" href="/about/"></a>
-                </li>
-                <li class="nav-item pl-md-5 ">
-                  <a class="nav-link" href="/blog-index-page/"></a>
-                </li>
-                <li class="nav-item pl-md-5 ">
-                  <a class="nav-link" href="/contact-us/"></a>
-                </li> -->
+
+
         <li class="nav-item pl-md-5">
           <button class="nav-link  btn-lg px-md-3 mr-md-5 text-center" style="font-family: 'Montserrat', sans-serif;"
             href="/donate/">DONATE</a>
@@ -78,7 +78,7 @@
   {% block content %}{% endblock %}
 
   <!-- Footer -->
-  <footer class="page-footer font-small stylish-color-dark pt-4">
+  <footer class="page-footer font-small stylish-color-dark pt-4 mt-md-5 pt-md-5">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
@@ -90,7 +90,24 @@
         <div class="col-md-4 mx-auto">
 
           <!-- Content -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Keep in touch</h5>
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 pb-md-3">Adeps</h5>
+          <hr />
+          <ul class="list-unstyled">
+            <p>
+              Alliance for Development of Population Service (ADEPS) is a non-profit, non-commercial, community based organisation.<br>
+            </p>
+
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 pb-md-3">Keep in touch</h5>
+          <hr />
           <ul class="list-unstyled">
             <li>
               Address : P.O. Box 1409 -50300<br>
@@ -109,78 +126,34 @@
         </div>
         <!-- Grid column -->
 
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
 
         <hr class="clearfix w-100 d-md-none">
 
         <!-- Grid column -->
         <div class="col-md-2 mx-auto">
 
+          {% for item in footer.menu_items.all %}
+          <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}
+            class="d-inline-flex">{{ item.title }}</a>
+          {% endfor %}
+
+
           <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 pb-md-3">Pages</h5>
+          <hr />
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Link 1</a>
+              <a href="#!">About Us</a>
             </li>
             <li>
-              <a href="#!">Link 2</a>
+              <a href="#!">Blog</a>
             </li>
             <li>
-              <a href="#!">Link 3</a>
+              <a href="#!">Contact Us</a>
             </li>
             <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
+              <a href="#!">Donate</a>
             </li>
           </ul>
 
@@ -195,7 +168,8 @@
 
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">Site made by:
+    
+    <div class="footer-copyright text-center py-3 mt-md-3 font-small">© 2017 ADEPS | ALL RIGHTS RESERVERD | MADE BY
       <a href="https://github.com/jany-dev/"> JANY-DEV</a>
     </div>
     <!-- Copyright -->
