@@ -54,6 +54,14 @@ input{
 .card-block{
     padding-top: 4rem;
 }
+.nav-item.pl-md-5 li a{
+    text-decoration: none;
+
+}
+
+.nav-item.pl-md-5 li a:hover{
+    text-decoration: none;
+}
 
 .navbar-light.navbar-nav.nav-link:hover{
 text-decoration: none;
