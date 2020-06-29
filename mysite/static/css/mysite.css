@@ -28,6 +28,7 @@ button, .btn.btn-primary.btn-lg, .button, .contact-page button{
 
 #base-jumbotron{
     padding: 6rem 3rem 1rem 5rem;
+    background-size: cover;
 }
 
 button{
@@ -72,8 +73,23 @@ input{
     padding: 0.5rem 5rem 0 0;
 
 }
-/* about page *
 
+@media (min-width: 1200px) { 
+    .homepage .card-block  .card-subtitle{
+        padding: 2rem 19rem 0 19rem;
+        font-size: 1.5rem;
+    }
+
+    .homepage .card-block  .card-deck{
+        padding: 0 5rem 0 5rem;
+    }
+}
+/* about page */
+
+.about-page-richtext iframe{
+    display: block;
+    margin: 0 auto;
+}
 .about-page .cta-block-text{
     padding: 0 1rem 3rem 1rem;
 }
