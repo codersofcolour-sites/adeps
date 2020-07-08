@@ -80,10 +80,10 @@ text-decoration: none;
     padding: 5rem 0 5rem 2rem;
 }
 
-/*.about-page .title-text-block-text{
+.about-page .title-text-block-text{
     padding-right: 26rem;
 }
-*/
+
 .about-page .card-subtitle{
     padding-right: 25rem;
     padding-top: .5rem;
@@ -91,7 +91,7 @@ text-decoration: none;
 
 
 
-/*.container-fluid.mt-md-5.text-left.about-page-richtext{
+.container-fluid.mt-md-5.text-left.about-page-richtext{
     padding-left: 1.5rem;
 }
 
