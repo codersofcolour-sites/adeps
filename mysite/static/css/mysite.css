@@ -98,7 +98,10 @@ text-decoration: none;
 .about-page .container-fluid.cta-block{
     padding-left: 2rem;
 }
+.about-page .title-text-block-text{
+    padding: 0.5rem 5rem 0 0;
 
+}
 
 
 /* Blog */
