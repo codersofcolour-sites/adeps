@@ -31,6 +31,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Montserrat:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'css/mysite.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
 
   {% block extra_css %}
   {# Override this in templates to add extra stylesheets #}
@@ -79,19 +81,19 @@
   {% block content %}{% endblock %}
 
   <!-- Footer -->
-  <footer class="page-footer font-small stylish-color-dark pt-4 mt-md-5 pt-md-5">
+  <footer class="page-footer font-small stylish-color-dark pt-5 mt-md-5 pt-md-5">
 
     <!-- Footer Links -->
-    <div class="container text-center text-md-left">
+    <div class="container text-center text-md-left mb-lg-5">
 
       <!-- Grid row -->
       <div class="row">
 
         <!-- Grid column -->
-        <div class="col-md-4 mx-auto">
+        <div class="col-md-4 mx-auto mb-5 mb-md-0">
 
           <!-- Content -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 pb-md-3">Adeps</h5>
+          <h5 class="font-weight-bold text-uppercase mt-5 mt-md-0 mb-4 pb-md-3">Adeps</h5>
           <hr />
           <ul class="list-unstyled">
             <p>
@@ -104,7 +106,7 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-4 mx-auto">
+        <div class="col-md-4 mx-auto mb-3 mb-md-0">
 
           <!-- Content -->
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4 pb-md-3">Keep in touch</h5>
@@ -131,7 +133,7 @@
         <hr class="clearfix w-100 d-md-none">
 
         <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
+        <div class="col-md-2 mb-5 mb-md-0 mx-auto">
 
           {% for item in footer.menu_items.all %}
           <a href="{{ item.link }}" {% if item.open_in_new_tab %} target="_blank" {% endif %}
@@ -170,7 +172,7 @@
 
     <!-- Copyright -->
     
-    <div class="footer-copyright text-center py-3 mt-md-3 font-small">© 2017 ADEPS | ALL RIGHTS RESERVERD | MADE BY
+    <div class="footer-copyright text-center py-3 px-4 mt-md-3 font-small">© 2017 ADEPS | ALL RIGHTS RESERVERD | MADE BY
       <a href="https://github.com/jany-dev/"> JANY-DEV</a>
     </div>
     <!-- Copyright -->

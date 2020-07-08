@@ -22,9 +22,6 @@ button, .btn.btn-primary.btn-lg, .button, .contact-page button{
 
 
 
-.jumbotron-fluid{
-    padding: 15rem 0 15rem 0;
-}
 
 #base-jumbotron{
     padding: 6rem 3rem 1rem 5rem;
@@ -66,36 +63,7 @@ input{
 .navbar-light.navbar-nav.nav-link:hover{
 text-decoration: none;
 }
-/*Home page */
-.home-page-rich-text{
-    padding: 11rem 0 6rem 0;
-    background-color: #FAFAFA;
-   /* box-shadow:  0 41.8px 33.4px rgba(0, 0, 0, 0.086);*/
-}
 
-.container-fluid.cta-block{
-    padding: 5rem;
-}
-.homepage .cta-block-text{
-    padding: 0 10rem 3rem 10rem;
-    font-size: 20px
-}
-
-.about-page .title-text-block-text{
-    padding: 0.5rem 5rem 0 0;
-
-}
-
-@media (min-width: 1200px) { 
-    .homepage .card-block  .card-subtitle{
-        padding: 2rem 19rem 0 19rem;
-        font-size: 1.5rem;
-    }
-
-    .homepage .card-block  .card-deck{
-        padding: 0 5rem 0 5rem;
-    }
-}
 /* about page */
 
 .about-page-richtext iframe{
@@ -112,16 +80,18 @@ text-decoration: none;
     padding: 5rem 0 5rem 2rem;
 }
 
-.about-page .title-text-block-text{
+/*.about-page .title-text-block-text{
     padding-right: 26rem;
 }
-
+*/
 .about-page .card-subtitle{
     padding-right: 25rem;
     padding-top: .5rem;
 }
 
-.container-fluid.mt-md-5.text-left.about-page-richtext{
+
+
+/*.container-fluid.mt-md-5.text-left.about-page-richtext{
     padding-left: 1.5rem;
 }
 
@@ -129,7 +99,7 @@ text-decoration: none;
     padding-left: 2rem;
 }
 
-*/
+
 
 /* Blog */
 .blog-index-card{
@@ -145,7 +115,7 @@ text-decoration: none;
     -webkit-transition: box-shadow .6s ease-in;
   }
 
-.blog-index-card a:hover,  li:hover{
+.blog-index-card a:hover{
     color: white;
 }
 
@@ -234,30 +204,4 @@ a.d-inline-flex:hover{
     justify-content: center;
 }
 
-
-/* footer */
-.page-footer{
-    background-color:#1c1c1c ;
-    color: white;
-}
-.page-footer li a{
-    color: white;
-    text-decoration: none;
-}
-
-.page-footer li a:hover{
-    color:#94142F ;
-}
-.page-footer .text-md-left{
-    margin: 3rem;
-    font-size: small;
-}
-.page-footer h5{
-    border-bottom: solid 0.5px darkgray;
-}
-
-.footer-copyright{
-    background-color:#212121;
-    font-size: small;
-}
 
