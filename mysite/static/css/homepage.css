@@ -1,11 +1,18 @@
 .jumbotron-fluid{
     padding: 15rem 0 15rem 0;
 }
-/*Home page */
+
+.display-4{
+    font-size: 2rem;
+    padding: 1rem;
+}
+.lead{
+    font-size: 1rem;
+}
+
 .home-page-rich-text{
-    padding: 6rem 4rem 6rem 4rem;
+    padding: 6rem 2rem 6rem 2rem;
     background-color: #FAFAFA;
-   /* box-shadow:  0 41.8px 33.4px rgba(0, 0, 0, 0.086);*/
 }
 
 .home-page-rich-text h2{
@@ -16,7 +23,7 @@
 }
 
 .container-fluid.cta-block{
-    padding: 5rem;
+    padding: 9rem 2rem 12rem 2rem;
     
 }
 .homepage .cta-block-text{
@@ -29,19 +36,18 @@
 }
 
 
-
-
 .homepage .card-block.container-fluid{
-    padding: 0 39px 10px 39px;
+    padding:8rem 2rem 8rem 2rem;
     
 }
+
 
 .homepage .card-deck .card{
     margin-bottom: 6rem;
 }
 
 .homepage .card-subtitle{
-    padding: 1rem 0 3rem 0;
+    padding: 1rem 0 8rem 0;
 }
 
 @media (min-width: 768px) { 
@@ -50,13 +56,36 @@
     }
     .homepage .card-deck{
         display: grid;
-
+        grid-gap: 7rem;
+        padding-top: 4rem;
+    }
+    .homepage .card-subtitle{
+        padding: 3rem 5rem 0 5rem;
+    }
+    .display-4{
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+   .lead{
+        font-size: 1rem;
+    }
+    .container-fluid.cta-block{
+        padding: 6rem;
+        
     }
 }
+
     @media (min-width: 1024px) { 
     .homepage .card-deck{
         display: flex;
     }
+    .homepage .card-block  .card-subtitle{
+        padding: 2rem 13rem 0 13rem;
+    }
+    .display-4{
+        font-size: 2.5rem;
+    }
+   
 }
 @media (min-width: 1200px) { 
     .homepage .card-block  .card-subtitle{
@@ -69,9 +98,15 @@
     }
 
     .homepage .card-block  .card-deck{
-        padding: 0 5rem 0 5rem;
+        padding: 4rem 5rem 0 5rem;
     }
     .homepage .cta-block-text{
         padding: 0 10rem 3rem 10rem;
         }
+    .display-4{
+        font-size: 3.5rem;
+    }    
+    .lead{
+        font-size: 1.5rem;
+    }
 }
