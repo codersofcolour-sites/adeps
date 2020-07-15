@@ -25,10 +25,9 @@ Use the pip to install Wagatil
 ```bash
 pip install wagtail
 ```
-Install prject dependecies
 
 ## Acknowledgement 
-This app was developed in collaboration with non-profit org Coders of Colour.
+This app was developed in collaboration with the non-profit org, Coders of Colour.
 
 ## Project Status
 The app is currently going through a re-design, although development has slowed down.
