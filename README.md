@@ -20,8 +20,8 @@ On Unix or MacOS (bash):
 ```bash
 python3 -m venv mysite/env
 source mysite/env/bin/activat
-Use the pip to install Wagatil
 ```
+Use the pip to install Wagatil
 ```bash
 pip install wagtail
 ```
