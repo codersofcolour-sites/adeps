@@ -15,3 +15,6 @@ Use the pip to install Wagatil
 ```bash
 pip install wagtail
 ```
+
+##Sources
+This app was developed in collaboration with non-profit org Coders of Colour
