@@ -2,6 +2,8 @@
 Website for a non-profit, non-commercial, community based organization in Vihiga, Kenya.
 App is built using Djgano framework and Wagtail CMS.
 
+View the live site - https://adeps.herokuapp.com/
+
 ## Installation
 Wagtail supports Python 3.5, 3.6, 3.7 and 3.8.
 
