@@ -1,112 +1,108 @@
-.jumbotron-fluid{
+.jumbotron-fluid {
     padding: 15rem 0 15rem 0;
 }
 
-.display-4{
+.display-4 {
     font-size: 2rem;
     padding: 1rem;
 }
-.lead{
+
+.lead {
     font-size: 1rem;
 }
 
-.home-page-rich-text{
+.home-page-rich-text {
     padding: 6rem 2rem 6rem 2rem;
     background-color: #FAFAFA;
 }
 
-.home-page-rich-text h2{
+.home-page-rich-text h2 {
     margin-bottom: 1rem;
 }
-.homepage .cta-block .h1.text-uppercase{
+
+.homepage .cta-block .h1.text-uppercase {
     margin-bottom: 3rem;
 }
 
-.container-fluid.cta-block{
+.container-fluid.cta-block {
     padding: 9rem 2rem 12rem 2rem;
-    
 }
-.homepage .cta-block-text{
-    
+
+.homepage .cta-block-text {
     font-size: 20px
 }
 
-.homepage .cta-block-text  p{
+.homepage .cta-block-text p {
     margin-bottom: 3;
 }
 
-
-.homepage .card-block.container-fluid{
-    padding:8rem 2rem 8rem 2rem;
-    
+.homepage .card-block.container-fluid {
+    padding: 8rem 2rem 8rem 2rem;
 }
 
-
-.homepage .card-deck .card{
+.homepage .card-deck .card {
     margin-bottom: 6rem;
 }
 
-.homepage .card-subtitle{
+.homepage .card-subtitle {
     padding: 1rem 0 8rem 0;
 }
 
-@media (min-width: 768px) { 
-    .homepage .card-body{
+@media (min-width: 768px) {
+    .homepage .card-body {
         padding: 0.25rem;
     }
-    .homepage .card-deck{
+    .homepage .card-deck {
         display: grid;
-        grid-gap: 7rem;
+        /*grid-gap: 7rem;*/
         padding-top: 4rem;
     }
-    .homepage .card-subtitle{
+    .homepage .card-subtitle {
         padding: 3rem 5rem 0 5rem;
     }
-    .display-4{
+    .display-4 {
         font-size: 2.5rem;
         padding: 1rem;
     }
-   .lead{
+    .lead {
         font-size: 1rem;
     }
-    .container-fluid.cta-block{
+    .container-fluid.cta-block {
         padding: 6rem;
-        
     }
 }
 
-    @media (min-width: 1024px) { 
-    .homepage .card-deck{
+@media (min-width: 1024px) {
+    .homepage .card-deck {
         display: flex;
+        grid-gap: 2.43rem;
     }
-    .homepage .card-block  .card-subtitle{
+    .homepage .card-block .card-subtitle {
         padding: 2rem 13rem 0 13rem;
     }
-    .display-4{
+    .display-4 {
         font-size: 2.5rem;
     }
-   
 }
-@media (min-width: 1200px) { 
-    .homepage .card-block  .card-subtitle{
+
+@media (min-width: 1200px) {
+    .homepage .card-block .card-subtitle {
         padding: 2rem 19rem 0 19rem;
         font-size: 1.5rem;
     }
-   
-    .card-body{
+    .card-body {
         padding: 1.25rem;
     }
-
-    .homepage .card-block  .card-deck{
+    .homepage .card-block .card-deck {
         padding: 4rem 5rem 0 5rem;
     }
-    .homepage .cta-block-text{
+    .homepage .cta-block-text {
         padding: 0 10rem 3rem 10rem;
-        }
-    .display-4{
+    }
+    .display-4 {
         font-size: 3.5rem;
-    }    
-    .lead{
+    }
+    .lead {
         font-size: 1.5rem;
     }
 }

@@ -15,11 +15,13 @@ Create and activate a virtual environment
 ``` bash
 python3 -m venv mysite\env
 mysite\env\Scripts\activate.bat
+
 ```
 On Unix or MacOS (bash):
 ```bash
 python3 -m venv mysite/env
 source mysite/env/bin/activat
+source tutorial-env/Scripts/activate
 ```
 Use the pip to install Wagatil
 ```bash
