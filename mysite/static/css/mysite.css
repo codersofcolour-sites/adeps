@@ -1,12 +1,17 @@
 body{
     background: white;
+}
+
+h1{
     font-family: 'Montserrat', sans-serif;
 }
 
-h1,h2,h4{
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
+h2, h3{
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+p{
+    font-family: 'Palanquin', sans-serif;
 }
 
 

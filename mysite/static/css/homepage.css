@@ -44,19 +44,25 @@
     margin-bottom: 6rem;
 }
 
+.homepage .card-deck {
+    display: grid;
+    grid-gap: 2.43rem;
+    padding-top: 4rem;
+}
 .homepage .card-subtitle {
     padding: 1rem 0 8rem 0;
+    font-size: 1rem;
+}
+
+.homepage p.card-text.text-left{
+    font-size: 16px;
 }
 
 @media (min-width: 768px) {
     .homepage .card-body {
         padding: 0.25rem;
     }
-    .homepage .card-deck {
-        display: grid;
-        /*grid-gap: 7rem;*/
-        padding-top: 4rem;
-    }
+    
     .homepage .card-subtitle {
         padding: 3rem 5rem 0 5rem;
     }
@@ -78,7 +84,8 @@
         grid-gap: 2.43rem;
     }
     .homepage .card-block .card-subtitle {
-        padding: 2rem 13rem 0 13rem;
+        padding: 2rem 17rem 0 17rem;
+        font-size: 1rem;
     }
     .display-4 {
         font-size: 2.5rem;
@@ -86,10 +93,6 @@
 }
 
 @media (min-width: 1200px) {
-    .homepage .card-block .card-subtitle {
-        padding: 2rem 19rem 0 19rem;
-        font-size: 1.5rem;
-    }
     .card-body {
         padding: 1.25rem;
     }
