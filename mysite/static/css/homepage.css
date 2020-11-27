@@ -36,12 +36,12 @@
     margin-bottom: 3;
 }
 
-.homepage .card-block.container-fluid {
-    padding: 8rem 2rem 8rem 2rem;
-}
+
 
 .homepage .card-block{
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .homepage .card-deck .card {
@@ -58,7 +58,7 @@
     font-weight: 600;
     font-size: 1.5rem;
     padding: .75rem 0;
-    line-height: 2rem;
+    line-height: 2.3rem;
     text-align: left;
 }
 
@@ -66,6 +66,7 @@
     padding: 1rem 1rem 2rem 0;
     font-size: 1rem;
     text-align: left;
+    line-height: 1.8rem;
 }
 .homepage .card-body{
     padding: 1rem 0;
@@ -73,6 +74,7 @@
 
 .homepage p.card-text.text-left {
     font-size: 14px;
+    line-height: 1.5rem;
 }
 
 .homepage .card-header {
@@ -103,21 +105,49 @@
         background-color: white;
         border-bottom: none;
         text-align: center;
+        padding: .75rem 4rem;
+    }
+
+    .homepage .card-deck{
+        margin: 0 6rem;
     }
 }
 
 @media (min-width: 1024px) {
     .homepage .card-deck {
-        display: flex;
+        flex-direction: row;
         grid-gap: 0.5rem;
+        margin: 0 1rem;
+        padding-top: 1rem;
+    }
+
+    .homepage h6.card-title{
+        font-size: 0.9rem;
     }
     .homepage .card-block .card-subtitle {
-        padding: 1.5rem 22rem 0 22rem;
+        padding: 1rem 12rem 0 12rem;
         font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .homepage .card-header{
+        padding: 0 11rem;
+        font-size: 1.7rem;
+    }
+
+    .homepage .card-block{
+        padding: 0;
     }
     .display-4 {
         font-size: 2.5rem;
     }
+    
+    .homepage p.card-text.text-left {
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+    }
+
+
 }
 
 @media (min-width: 1200px) {
@@ -130,14 +160,33 @@
     .homepage .cta-block-text {
         padding: 0 10rem 3rem 10rem;
     }
-    .homepage .card-header {
-        padding: 0 21rem 0 21rem;
-        line-height: 2.9rem;
-    }
+   
     .display-4 {
         font-size: 3.5rem;
     }
     .lead {
         font-size: 1.5rem;
     }
+
+    .homepage .card-header {
+        padding: 0 17rem 0 17rem;
+        line-height: 2.5rem;
+    }
+
+    .homepage .card-block .card-deck {
+        padding-top: 1rem
+}
+
+@media (min-width: 1400px) {
+    
+    .homepage .card-header {
+        padding: 0 24rem 0 24rem
+    }
+
+    .homepage .card-block .card-subtitle {
+        padding: 1rem 21rem 0 21rem;
+    }
+
+
+}
 }
