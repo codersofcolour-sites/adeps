@@ -2,11 +2,11 @@ body{
     background: white;
 }
 
-h1{
+h1, h2{
     font-family: 'Montserrat', sans-serif;
 }
 
-h2, h3{
+h3{
     font-family: 'Hind Madurai', sans-serif;
 }
 

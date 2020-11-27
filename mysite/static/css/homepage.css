@@ -40,31 +40,54 @@
     padding: 8rem 2rem 8rem 2rem;
 }
 
+.homepage .card-block{
+    padding: 0 2rem;
+}
+
 .homepage .card-deck .card {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 .homepage .card-deck {
-    display: grid;
-    grid-gap: 2.43rem;
+    display: flex;
+    flex-direction: column;
     padding-top: 4rem;
 }
-.homepage .card-subtitle {
-    padding: 1rem 0 8rem 0;
-    font-size: 1rem;
+
+.homepage .card-header {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: .75rem 0;
+    line-height: 2rem;
+    text-align: left;
 }
 
-.homepage p.card-text.text-left{
-    font-size: 16px;
+.homepage .card-subtitle {
+    padding: 1rem 1rem 2rem 0;
+    font-size: 1rem;
+    text-align: left;
 }
+.homepage .card-body{
+    padding: 1rem 0;
+}
+
+.homepage p.card-text.text-left {
+    font-size: 14px;
+}
+
+.homepage .card-header {
+    background-color: white;
+    border-bottom: none;
+}
+
 
 @media (min-width: 768px) {
     .homepage .card-body {
         padding: 0.25rem;
     }
-    
     .homepage .card-subtitle {
-        padding: 3rem 5rem 0 5rem;
+        padding: 0 5rem 0 5rem;
+        text-align: center;
     }
     .display-4 {
         font-size: 2.5rem;
@@ -76,15 +99,20 @@
     .container-fluid.cta-block {
         padding: 6rem;
     }
+    .homepage .card-header {
+        background-color: white;
+        border-bottom: none;
+        text-align: center;
+    }
 }
 
 @media (min-width: 1024px) {
     .homepage .card-deck {
         display: flex;
-        grid-gap: 2.43rem;
+        grid-gap: 0.5rem;
     }
     .homepage .card-block .card-subtitle {
-        padding: 2rem 17rem 0 17rem;
+        padding: 1.5rem 22rem 0 22rem;
         font-size: 1rem;
     }
     .display-4 {
@@ -97,10 +125,14 @@
         padding: 1.25rem;
     }
     .homepage .card-block .card-deck {
-        padding: 4rem 5rem 0 5rem;
+        padding: 2rem 5rem 0 5rem;
     }
     .homepage .cta-block-text {
         padding: 0 10rem 3rem 10rem;
+    }
+    .homepage .card-header {
+        padding: 0 21rem 0 21rem;
+        line-height: 2.9rem;
     }
     .display-4 {
         font-size: 3.5rem;
