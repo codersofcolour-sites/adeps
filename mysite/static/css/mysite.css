@@ -1,3 +1,8 @@
+*{
+margin: 0;
+padding: 0;
+width: 100%;
+}
 body{
     background: white;
 }
@@ -74,7 +79,7 @@ input{
 text-decoration: none;
 }
 
-/* about page */
+/* about page *
 
 .about-page-richtext iframe{
     display: block;
@@ -94,10 +99,57 @@ text-decoration: none;
     padding-right: 26rem;
 }
 
-.about-page .card-subtitle{
+/*.about-page .card-subtitle{
     padding-right: 25rem;
     padding-top: .5rem;
+}*/
+
+
+
+ .card-block{
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
 }
+
+ .card-deck .card {
+    margin-bottom: 4rem;
+}
+
+ .card-deck {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+ .card-header {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: .75rem 0;
+    line-height: 2.3rem;
+    text-align: left;
+}
+
+ .card-subtitle {
+    padding: 1rem 1rem 2rem 0;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8rem;
+}
+ .card-body{
+    padding: 1rem 0;
+}
+
+ p.card-text.text-left {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+ .card-header {
+    background-color: white;
+    border-bottom: none;
+}
+
 
 
 

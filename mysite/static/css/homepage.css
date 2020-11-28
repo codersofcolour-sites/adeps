@@ -38,23 +38,23 @@
 
 
 
-.homepage .card-block{
+ .card-block{
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
 }
 
-.homepage .card-deck .card {
+ .card-deck .card {
     margin-bottom: 4rem;
 }
 
-.homepage .card-deck {
+ .card-deck {
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
 }
 
-.homepage .card-header {
+ .card-header {
     font-weight: 600;
     font-size: 1.5rem;
     padding: .75rem 0;
@@ -62,22 +62,22 @@
     text-align: left;
 }
 
-.homepage .card-subtitle {
+ .card-subtitle {
     padding: 1rem 1rem 2rem 0;
     font-size: 1rem;
     text-align: left;
     line-height: 1.8rem;
 }
-.homepage .card-body{
+ .card-body{
     padding: 1rem 0;
 }
 
-.homepage p.card-text.text-left {
+ p.card-text.text-left {
     font-size: 14px;
     line-height: 1.5rem;
 }
 
-.homepage .card-header {
+ .card-header {
     background-color: white;
     border-bottom: none;
 }
@@ -131,7 +131,7 @@
     }
 
     .homepage .card-header{
-        padding: 0 11rem;
+        padding: 0 8rem;
         font-size: 1.7rem;
     }
 
@@ -180,11 +180,11 @@
 @media (min-width: 1400px) {
     
     .homepage .card-header {
-        padding: 0 24rem 0 24rem
+        padding: 0 21rem 0 21rem
     }
 
     .homepage .card-block .card-subtitle {
-        padding: 1rem 21rem 0 21rem;
+        padding: 1rem 21rem;
     }
 
 
