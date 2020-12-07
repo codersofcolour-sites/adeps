@@ -22,8 +22,8 @@ p{
 
 
 button, .btn.btn-primary.btn-lg, .button, .contact-page button{
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: #DAAC22;
+    border-color: #DAAC22;
     color: rgba(0,0,0,.5);
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
@@ -222,14 +222,14 @@ text-decoration: none;
 }
 
 .contact-page button{
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: #DAAC22;
+    border-color: #DAAC22;
     color: whitesmoke;
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     padding: 1rem;
-    border-radius: .3rem;
+    width: 10px;
 }
 /* donate */
 #donate-page-richtext{

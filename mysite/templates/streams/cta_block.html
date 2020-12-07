@@ -1,15 +1,16 @@
 {# streams/cta_block.html #}
 {% load wagtailcore_tags %}
 
-<div class="container-fluid cta-block" style="background-color: lightseagreen; color: whitesmoke;">
+<div class="container-fluid cta-block" >
        
-            <h1 class="pt-md-3 pb-md-5 text-uppercase">{{ self.title }}</h1>
+            <h2 class="pt-md-3 pb-md-5 text-uppercase cta-block-title">{{ self.title }}</h2>
             
                <div class="cta-block-text">{{ self.text|richtext }}</div>
             
                <div class="progress">
                 <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar" aria-valuenow="14.81" aria-valuemin="0" aria-valuemax="100" style="width: 14.81%"> 15% </div>
               </div> 
+             
             {% if self.button_cta %}
             <a class="btn btn-primary btn-lg mt-4 px-md-5" href="{{ self.button_page.url }}" role="button">{{ self.button_text }}</a>
                
