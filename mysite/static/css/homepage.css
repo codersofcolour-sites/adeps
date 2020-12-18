@@ -38,8 +38,36 @@
     margin-bottom: 3;
 }
 
+.container-fluid.cta-block  .progressbar-bg{
+    background-color: #ffffff;
+    padding: 3rem 2rem 1rem 2rem;
+    border-radius: 0.25rem;
+    height: 18rem;
+}
+.container-fluid.cta-block .progress{
+    height: 0.5rem;
+}
 
+.container-fluid.cta-block .progress, .container-fluid.cta-block .progress-bar{
+    border-radius: 0.25rem;
+}
 
+.container-fluid.cta-block .progress-bar{
+    background-color: #DAAC22;
+}
+
+.container-fluid.cta-block  .progressbar-bg .progress-bar-text{
+margin: 0;
+display: inline-flex;
+text-align: right;
+color: #A6ADB4;
+font-size: 0.7rem;
+padding-top: 1rem;
+
+}
+.container-fluid.cta-block  .progressbar-bg .progress-bar-text span{
+    text-align: left;
+}
  .card-block{
     padding: 0 2rem;
     display: flex;

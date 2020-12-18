@@ -1,24 +1,29 @@
 {# streams/cta_block.html #}
 {% load wagtailcore_tags %}
 
-<div class="container-fluid cta-block" >
+<div class="container-fluid cta-block">
+
+    <h2 class="pt-md-3 pb-md-5 text-uppercase cta-block-title">{{ self.title }}</h2>
+
+    <div class="cta-block-text">{{ self.text|richtext }}</div>
+    <div class="progressbar-bg">
        
-            <h2 class="pt-md-3 pb-md-5 text-uppercase cta-block-title">{{ self.title }}</h2>
-            
-               <div class="cta-block-text">{{ self.text|richtext }}</div>
-            
-               <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated " role="progressbar" aria-valuenow="14.81" aria-valuemin="0" aria-valuemax="100" style="width: 14.81%"> 15% </div>
-              </div> 
-             
-            {% if self.button_cta %}
-            <a class="btn btn-primary btn-lg mt-4 px-md-5" href="{{ self.button_page.url }}" role="button">{{ self.button_text }}</a>
-               
-            {% elif self.button_url %}
-                <a class="btn btn-primary btn-lg mt-4" href="{{ self.button_url }}">{{ self.button_text }}</a>
-            {% endif %}
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="14.81" aria-valuemin="0" aria-valuemax="100"
+                style="width: 14.81%"></div>
         </div>
+        <label class="progress-bar-text"><span>120,954 people</span>40,000 people </label>
+        
     </div>
+    {% if self.button_cta %}
+    <a class="btn btn-primary btn-lg mt-4 px-md-5" href="{{ self.button_page.url }}"
+        role="button">{{ self.button_text }}</a>
+
+    {% elif self.button_url %}
+    <a class="btn btn-primary btn-lg mt-4" href="{{ self.button_url }}">{{ self.button_text }}</a>
+    {% endif %}
+</div>
+</div>
 </div>
 
 <!---
