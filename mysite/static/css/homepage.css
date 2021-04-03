@@ -42,7 +42,7 @@
     background-color: #ffffff;
     padding: 3rem 2rem 1rem 2rem;
     border-radius: 0.25rem;
-    height: 18rem;
+    
 }
 .container-fluid.cta-block .progress{
     height: 0.5rem;
@@ -52,9 +52,32 @@
     border-radius: 0.25rem;
 }
 
+.fas.fa-comment-alt{
+    color: #DAAC22;
+    padding-left: 2.4rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.fas.fa-comment-alt::before{
+    display: flex;
+    position: relative;
+}
+
+.fas.fa-comment-alt span{
+        position: absolute;
+        /* left: 43px; */
+        z-index: 0;
+        color: white;
+        font-size: 0.9rem;
+        /* top: 6px; */
+        justify-content: center;
+}
 .container-fluid.cta-block .progress-bar{
     background-color: #DAAC22;
 }
+
+
 
 .container-fluid.cta-block  .progressbar-bg .progress-bar-text{
 margin: 0;
@@ -125,23 +148,28 @@ padding-top: 1rem;
         padding: 0 5rem 0 5rem;
         text-align: center;
     }
-    .display-4 {
+    /*isplay-4 {
         font-size: 2.5rem;
         padding: 1rem;
-    }
+    }*/
     .lead {
         font-size: 1rem;
     }
     .container-fluid.cta-block {
-        padding: 6rem;
+        padding: 8rem;
+        text-align: left;
     }
     .homepage .card-header {
         background-color: white;
         border-bottom: none;
         text-align: center;
-        padding: 1.75rem 5rem;
+        
     }
+    .homepage .cta-block-title, .homepage .card-header{
+        padding: 1.75rem 5rem;
 
+        
+    }
 
    .card-deck{
        padding: 4rem 6rem;
@@ -186,6 +214,14 @@ padding-top: 1rem;
         margin: 0;
         padding: 5rem 3rem;
     }
+    .container-fluid.cta-block {
+        padding: 6rem;
+        text-align: center;
+    }
+
+    .homepage .cta-block-title{
+        text-align: center;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -224,7 +260,12 @@ padding-top: 1rem;
     .homepage .card-block .card-subtitle {
         padding: 1rem 21rem;
     }
-
-
+    .card-header, .homepage .cta-block-title{
+        text-align: center;
+    }
+    .container-fluid.cta-block .progressbar-bg{
+        margin: 0 16rem;
+        width: 58%;
+    }
 }
 }

@@ -1,7 +1,6 @@
 *{
 margin: 0;
 padding: 0;
-width: 100%;
 }
 body{
     background: white;
@@ -151,7 +150,14 @@ text-decoration: none;
 }
 
 
-
+.display-4{
+    background-color: rgba(0, 139, 139,45%);
+    /* width: 100%; */
+    text-align: center;
+    width: 100%
+    font-size: 2.5rem;
+        padding: 1rem;
+}
 
 .container-fluid.mt-md-5.text-left.about-page-richtext{
     padding-left: 1.5rem;
