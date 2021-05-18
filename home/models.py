@@ -1,10 +1,15 @@
 from django.db import models
 from wagtail.core import blocks
+from wagtail.core import fields
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel, StreamFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.embeds.blocks import EmbedBlock
+from wagtail.images.blocks import ImageChooserBlock
+
+from wagtailcolumnblocks.blocks import ColumnsBlock
+
 
 from streams import blocks
 
