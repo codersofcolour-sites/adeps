@@ -125,12 +125,12 @@ class SidebarPage(Page):
         FieldPanel('title'),
         StreamFieldPanel('content')
     ]
-
+"""
 class HomePage(Page):
     pass
 
 
-"""
+
 class FormField(AbstractFormField):
     page = ParentalKey(
         'ContactPage',
