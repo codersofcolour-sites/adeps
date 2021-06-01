@@ -71,7 +71,7 @@ MIDDLEWARE = [
 
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'wagtail.core.middleware.SiteMiddleware',
+    "wagtail.contrib.legacy.sitemiddleware.SiteMiddleware",
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     # Whitenoise middleware is used to server static files (CSS, JS, etc.).
     # According to the official documentation it should be listed underneath
