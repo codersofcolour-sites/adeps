@@ -8,7 +8,7 @@ from wagtail.embeds.blocks import EmbedBlock
 
 from streams import blocks
 
-class AboutPage(Page):
+class AboutPage(Page): #test
    
     banner_title = models.CharField(max_length=100, blank=False, null=True)
     banner_subtitle = RichTextField(features=["bold", "italic"])
