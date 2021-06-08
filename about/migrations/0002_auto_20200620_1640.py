@@ -9,7 +9,7 @@ import wagtail.core.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('wagtailimages', '0023_add_choose_permissions'),
+       # ('wagtailimages', '0023_add_choose_permissions'),
         ('about', '0001_initial'),
     ]
 
